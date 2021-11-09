@@ -1,5 +1,18 @@
+{% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href={% static "css/main.css" %} rel="stylesheet">
+<title>{{ tytul }}</title>
+</head>
+<body>
 {% for post in posty %}
+<div class="post_tresc">
 {{ post.tresc }}
+</div>
 <br>
-{% endfor  %}
+Autor: {{ post.autor_imie }} {{ post.autor_nazwisko }}
+<br>
+{% endfor %}
+</body>

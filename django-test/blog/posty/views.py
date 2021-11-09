@@ -5,5 +5,6 @@ from .models import Post
 
 def lista_postow(request):
     posty = Post.objects.all()
-    return render(request, 'posty/lista.html', {'posty': posty})
+    title = "Nasz Blog"
+    return render(request, 'posty/lista.html', {'posty': posty, 'tytul': title})
 
